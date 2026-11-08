@@ -63,4 +63,9 @@ input[type="color"]{height:54px;min-height:54px;cursor:pointer;padding:5px}
   button.addEventListener('click',function(){mode=mode==='dark'?'light':'dark';try{localStorage.setItem(key,mode)}catch(e){}apply()});
   apply();
 })();
-</script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script src="app.js?v=24"></script><script src="auth.js?v=24"></script></body></html>
+</script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script>
+// Evita que un service worker antiguo mezcle versiones de archivos.
+if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(rs=>Promise.all(rs.map(r=>r.unregister()))).catch(()=>{});
+</script>
+<script src="./app.js?v=26" onerror="document.getElementById('authStatus').textContent='No se pudo descargar app.js. Revisá que el archivo se llame exactamente app.js en GitHub.'"></script>
+<script src="./auth.js?v=26" onerror="document.getElementById('authStatus').textContent='No se pudo descargar auth.js. Revisá el nombre del archivo en GitHub.'"></script></body></html>
