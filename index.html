@@ -67,5 +67,5 @@ input[type="color"]{height:54px;min-height:54px;cursor:pointer;padding:5px}
 // Evita que un service worker antiguo mezcle versiones de archivos.
 if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(rs=>Promise.all(rs.map(r=>r.unregister()))).catch(()=>{});
 </script>
-<script src="./app.js?v=29fix2" onerror="document.getElementById('authStatus').textContent='No se pudo descargar app.js. Revisá que el archivo se llame exactamente app.js en GitHub.'"></script>
+<script src="./campo.js?v=30tools1"></script><script src="./app.js?v=30tools1" onerror="document.getElementById('authStatus').textContent='No se pudo descargar app.js. Revisá que el archivo se llame exactamente app.js en GitHub.'"></script>
 <script src="./auth.js?v=29fix2" onerror="document.getElementById('authStatus').textContent='No se pudo descargar auth.js. Revisá el nombre del archivo en GitHub.'"></script></body></html>
