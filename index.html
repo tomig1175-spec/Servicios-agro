@@ -1,0 +1,66 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#185c35"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="SERVICIOS"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><title>SERVICIOS</title><style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#173026;background:#f3f6f1}*{box-sizing:border-box}body{margin:0;padding-bottom:190px}header{background:#185c35;color:white;padding:22px 18px 18px}header small{color:#f6d85b;font-weight:800;letter-spacing:1px}header h1{font-size:23px;margin:5px 0}header p{margin:0;color:#d8eadc;font-size:13px}main{max-width:760px;margin:auto;padding:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{background:white;border:1px solid #dce5db;border-radius:15px;padding:14px;margin-bottom:12px}.stat{font-size:20px;font-weight:800;overflow-wrap:anywhere}.muted{color:#65766a;font-size:13px}.tag{font-size:12px;background:#e6f2e7;padding:4px 8px;border-radius:12px}h2{font-size:19px;margin:12px 0}h3{font-size:16px;margin:8px 0}button{border:0;background:#1d6c3c;color:white;border-radius:12px;padding:13px 15px;font-size:15px;font-weight:700;cursor:pointer;min-height:46px}button.secondary{background:#e9eee8;color:#194b30}button.yellow{background:#edc946;color:#213d29}button.danger{background:#a72e2e}button:disabled{opacity:.45}.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.actions button{min-height:78px}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.row>*{min-width:0}.line{border-top:1px solid #e1e8e0;margin:12px 0}.listitem{padding:12px 0;border-bottom:1px solid #e4ebe3}.listitem:last-child{border:0}label{display:block;font-size:13px;font-weight:700;margin:11px 0 5px}input,select,textarea{width:100%;border:1px solid #bfcdbf;border-radius:10px;padding:12px;font-size:16px;background:white;color:#173026}input[type=checkbox]{width:22px;height:22px;accent-color:#1d6c3c}textarea{min-height:75px}form button[type=submit]{width:100%;margin-top:16px}.full{width:100%}.hide{display:none!important}.tabs{display:flex;gap:7px;overflow:auto;margin:10px 0 15px}.tabs button{white-space:nowrap;background:#e7eee6;color:#245536}.tabs button.active{background:#185c35;color:white}.pill{display:inline-block;padding:5px 9px;border-radius:20px;background:#e6eee6;font-size:12px}nav{position:fixed;bottom:90px;left:0;right:0;background:#fff;border-top:1px solid #d8e3d8;display:flex;justify-content:space-around;padding:7px 3px max(8px,env(safe-area-inset-bottom));z-index:20}nav button{background:white;color:#2d5c3b;font-size:11px;padding:7px 2px;min-height:44px;flex:1}nav button.active{background:#e6f1e5}.notice{padding:12px;border-radius:10px;background:#fff8d8;font-size:13px}.tiny{font-size:12px}.flex{display:flex;gap:8px;flex-wrap:wrap}.flex button{flex:1}.green{color:#19703e}.red{color:#b12b2b}@media (max-width:600px){nav{bottom:90px}body{padding-bottom:190px}}@media print{header,nav,.no-print,button,form{display:none!important}body{background:white;padding:0}main{max-width:none}.card{break-inside:avoid;border:1px solid #aaa}#app{display:none}#printArea{display:block!important} }
+
+/* Tema oscuro: mantiene contraste en formularios, tarjetas y navegación. */
+html[data-theme="dark"]{color-scheme:dark;background:#101914}
+html[data-theme="dark"] body{background:#101914;color:#edf4ee}
+html[data-theme="dark"] header{background:#123d29}
+html[data-theme="dark"] .card{background:#1b2920;border-color:#385044}
+html[data-theme="dark"] .muted{color:#b2c5b6}
+html[data-theme="dark"] .tag,html[data-theme="dark"] .pill{background:#304637;color:#e8f2e9}
+html[data-theme="dark"] .line,html[data-theme="dark"] .listitem{border-color:#3b5041}
+html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#17251c;color:#f2f8f2;border-color:#617568}
+html[data-theme="dark"] button.secondary,html[data-theme="dark"] .tabs button{background:#34483a;color:#f1f7f1}
+html[data-theme="dark"] .tabs button.active{background:#237544;color:#fff}
+html[data-theme="dark"] nav{background:#17251c;border-color:#405345}
+html[data-theme="dark"] nav button{background:#17251c;color:#e2f3e5}
+html[data-theme="dark"] nav button.active{background:#365441;color:#fff}
+html[data-theme="dark"] .notice{background:#494122;color:#fff2b6}
+html[data-theme="dark"] .green{color:#72d49a}
+html[data-theme="dark"] .red{color:#ff9393}
+.theme-switch{position:absolute;right:15px;top:19px;background:#ffffff20;border:1px solid #ffffff70;color:white;padding:8px 11px;min-height:38px;font-size:13px;border-radius:10px}
+header{position:relative;padding-right:115px}
+@media print{html[data-theme="dark"] body,html[data-theme="dark"] .card{background:white!important;color:black!important}}
+
+/* Navegación superior bajo el encabezado, sin superposición con Netlify ni controles del iPhone. */
+body{padding-bottom:24px}
+nav{position:sticky;top:0;bottom:auto;left:auto;right:auto;width:100%;border-top:0;border-bottom:1px solid #d8e3d8;padding:7px 5px;z-index:20;gap:3px;box-shadow:0 2px 7px #00000010}
+nav button{min-width:0;flex:1;font-size:11px;line-height:1.25;padding:8px 1px;min-height:49px;border-radius:9px}
+@media(max-width:600px){nav{bottom:auto}body{padding-bottom:24px}}
+@media print{nav{display:none!important}}
+
+:root{--brand:#185c35;--brand-button:#1d6c3c;--brand-soft:#e6f1e5}
+header, .tabs button.active{background:var(--brand)!important}
+button:not(.secondary):not(.yellow):not(.danger):not(.theme-switch):not([data-nav]):not(.active){background:var(--brand-button)}
+nav button.active{background:var(--brand-soft)}
+input[type=checkbox]{accent-color:var(--brand-button)}
+html[data-theme="dark"] header,html[data-theme="dark"] .tabs button.active{background:var(--brand)!important}
+html[data-theme="dark"] nav button.active{background:var(--brand)!important;color:white}
+.color-settings{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}.color-choice{width:44px;height:44px;min-height:44px;border:3px solid transparent;border-radius:50%;padding:0!important}.color-choice.selected{outline:3px solid currentColor;outline-offset:2px}
+
+/* Colores v20: abarcan menú, botones, títulos y acentos, también en modo oscuro */
+:root{--brand-ink:#185c35}
+header, .tabs button.active, html[data-theme="dark"] header,html[data-theme="dark"] .tabs button.active{background-color:var(--brand)!important}
+button:not(.secondary):not(.yellow):not(.danger):not(.theme-switch):not([data-nav]):not(.color-choice){background-color:var(--brand-button)!important}
+nav button.active,html[data-theme="dark"] nav button.active{background-color:var(--brand)!important;color:#fff!important}
+.color-choice{background-color:var(--swatch)!important;border:3px solid #ffffff88!important;box-shadow:0 0 0 1px #8885}
+.color-choice.selected{outline:3px solid var(--brand)!important;outline-offset:3px}
+input[type="color"]{height:54px;min-height:54px;cursor:pointer;padding:5px}
+.ruler-ticks{position:relative;height:86px;overflow:hidden;border-bottom:3px solid currentColor;touch-action:pan-y}
+.ruler-ticks span{pointer-events:none}
+#authOverlay{position:fixed;inset:0;background:var(--bg,#f4f5f4);z-index:9999;overflow:auto;padding:35px 16px;color:var(--text,#222)}#authOverlay .authcard{max-width:430px;margin:30px auto;background:var(--card,#fff);padding:22px;border-radius:18px;box-shadow:0 4px 22px #0002}#authOverlay input{width:100%;box-sizing:border-box;margin:7px 0 13px}#authOverlay button{margin:5px 3px 5px 0}#authOverlay .status{white-space:pre-wrap;font-size:14px}#syncBadge{position:fixed;right:8px;top:8px;z-index:10;background:#fff;color:#333;padding:4px 7px;border-radius:8px;font-size:11px}</style></head><body><header><button class="theme-switch no-print" id="themeSwitch" type="button" aria-label="Cambiar modo de visualización">🌙 Oscuro</button><small>GESTIÓN AGROPECUARIA</small><h1>SERVICIOS</h1><p>Tu campo, tus números, todo en un lugar</p></header><nav id="nav"><button data-nav="home">⌂<br>Inicio</button><button data-nav="jobs">▤<br>Trabajos</button><button data-nav="workers">♟<br>Empleados</button><button data-nav="fuel">⛽<br>Gasoil</button><button data-nav="expenses">🧾<br>Gastos</button><button data-nav="more">☷<br>Más</button></nav><main id="app"></main><span id="syncBadge" hidden></span><div id="authOverlay"><div class="authcard"><h1>🚜 SERVICIOS</h1><p>Ingresá para acceder a tus datos</p><div id="setupFields"><label>URL de Supabase</label><input id="supUrl" placeholder="https://...supabase.co"><label>Clave pública (publishable)</label><input id="supKey" placeholder="sb_publishable_..."><button id="saveConfig">Guardar conexión</button><hr></div><label>Correo electrónico</label><input id="authEmail" type="email" autocomplete="email"><label>Contraseña</label><input id="authPass" type="password" autocomplete="current-password"><div><button id="loginBtn">Ingresar</button><button id="signupBtn" class="secondary">Crear cuenta</button></div><button id="resetBtn" class="secondary">Recuperar contraseña</button><p id="authStatus" class="status"></p></div></div><section id="printArea" class="hide"></section><script>
+(function(){
+  const key='servicios-color-theme';
+  let mode='light';
+  try{mode=localStorage.getItem(key)==='dark'?'dark':'light'}catch(e){}
+  const button=document.getElementById('themeSwitch');
+  const palette={verde:'#185c35',rojo:'#ae3038',azul:'#245ea5',naranja:'#b75a15',violeta:'#7043a3',negro:'#34383d'};
+  function validColor(c){return /^#[0-9a-fA-F]{6}$/.test(c||'')?c:palette.verde}
+  window.setServiciosColor=function(c){c=validColor(c);document.documentElement.style.setProperty('--brand',c);document.documentElement.style.setProperty('--brand-button',c);document.documentElement.style.setProperty('--brand-soft',c+'22');document.documentElement.style.setProperty('--brand-ink',c);const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=c;try{localStorage.setItem('servicios-accent',c)}catch(e){};document.querySelectorAll('.color-choice').forEach(b=>b.classList.toggle('selected',b.dataset.color===c));};
+  window.serviciosPalette=palette;
+  window.getServiciosColor=function(){try{return validColor(localStorage.getItem('servicios-accent'))}catch(e){return palette.verde}};
+  function apply(){document.documentElement.dataset.theme=mode;button.textContent=mode==='dark'?'☀️ Claro':'🌙 Oscuro';window.setServiciosColor(window.getServiciosColor())}
+  button.addEventListener('click',function(){mode=mode==='dark'?'light':'dark';try{localStorage.setItem(key,mode)}catch(e){}apply()});
+  apply();
+})();
+</script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script src="app.js"></script><script src="auth.js"></script></body></html>
